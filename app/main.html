@@ -1,0 +1,108 @@
+<header id="header" ng-class="{'header-fixed' : fields.headerfixed}">
+  <div ng-class="{'fixed' : fields.sidebarfixed}" class="logo">
+    <a ui-sref="app.main.dashboard">
+      <img src="assets/img/{{fields.theme == 'theme-2' ? 'github-logo-white' : 'github-logo'}}.png" />
+    </a>
+  </div>
+  <div class="header-content">
+    <button id="sidebar-toggle" type="button" class="navbar-toggle collapsed btn btn-default" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span>
+    </button>
+    <ul>
+      <li class="dropdown">
+        <a href class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+          <img src="assets/img/profile.jpg" class="img-circle" />
+          <span class="hidden-xs">Ricardo Camacho</span>
+          <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#/">Profile</a></li>
+          <li><a ng-click="logout()" style="cursor:pointer">Log Out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+<section id="container">
+  <nav id="sidebar" ng-class="{'sidebar-fixed' : fields.sidebarfixed}" ng-controller="SidebarController">
+    <form>
+      <div class="form-group" style="margin:10px;">
+        <input type="text" class="form-control" style="font-weight:normal;" placeholder="Search..." />
+        <!--<button type="submit" class="btn btn-default">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>-->
+      </div>
+    </form>
+    <ul>
+      <li>
+        <a ui-sref="app.main.dashboard" href="#/app/dashboard" ng-class="{'active' : isActive('/app/dashboard')}">
+          <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="javascript:void(0)" ng-class="{'active' : isActive('/app/ui')}">
+          <span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>
+          UI Elements
+          <span class="caret"></span>
+        </a>
+        <ul>
+          <li><a ui-sref="app.main.elements" href="#/app/ui/elements">Elements</a></li>
+          <li><a ui-sref="app.main.icons" href="#/app/ui/icons">Icons</a></li>
+          <li><a ui-sref="app.main.buttons" href="#/app/ui/buttons">Buttons</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:void(0)" ng-class="{'active' : isActive('/app/forms')}">
+          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+          Forms
+          <span class="caret"></span>
+        </a>
+        <ul>
+          <li><a ui-sref="app.main.forms" href="#/app/forms/elements">Form Elements</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="javascript:void(0)" ng-class="{'active' : isActive('/app/tables')}">
+          <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+          Tables
+          <span class="caret"></span>
+        </a>
+        <ul>
+          <li><a ui-sref="app.main.tables" href="#/app/tables/simple">Simple Tables</a></li>
+          <li><a ui-sref="app.main.datatables" href="#/app/tables/datatables">Dynamic Tables</a></li>
+        </ul>
+      </li>
+      <li>
+        <a ui-sref="app.main.charts" href="#/app/charts" ng-class="{'active' : isActive('/app/charts')}">
+          <span class="glyphicon glyphicon-stats" aria-hidden="true"></span>
+          Charts
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <div class="container-fluid" ui-view></div>
+  </div>
+</section>
+<script>
+$(document).ready(function () {
+  $('.config > .config-toggle').click(function(){
+    $(this).parent().toggleClass('open');
+  });
+  $('#sidebar-toggle').click(function () {
+    $('header, header > .logo, section, section > nav#sidebar').toggleClass('active');
+  });
+  $('nav > ul > li > a').click(function(){
+    if(!$(this).hasClass('open')){
+      $(this).parent().parent().find('ul').not(this).slideUp();
+      $(this).parent().find('ul').slideToggle('fast');
+      $(this).parent().parent().find('a').removeClass('open');
+      $(this).addClass('open');
+    }else{
+      $(this).parent().find('ul').slideToggle('fast');
+      $(this).removeClass('open');
+    }
+  });
+});
+</script>

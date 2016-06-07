@@ -1,0 +1,29 @@
+{
+  "name": "angularjs-admin-panel",
+  "version": "0.0.0",
+  "description": "AngularJS Admin Panel",
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node node_modules/http-server/bin/http-server -o"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ricardocamacho/angularjs-admin-panel.git"
+  },
+  "keywords": [
+    "angularjs",
+    "admin",
+    "panel"
+  ],
+  "author": "Ricardo Camacho",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ricardocamacho/angularjs-admin-panel/issues"
+  },
+  "homepage": "https://github.com/ricardocamacho/angularjs-admin-panel#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "http-server": "^0.9.0"
+  }
+}

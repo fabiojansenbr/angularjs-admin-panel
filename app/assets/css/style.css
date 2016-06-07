@@ -1,0 +1,313 @@
+/* ---------------------------------------------------------------------- */
+/*  Basic Elements & Classes
+/* ---------------------------------------------------------------------- */
+
+body{
+  color: #666666;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  /*overflow-x: hidden;*/
+}
+
+body.header-fixed{
+  padding-top: 50px;
+}
+
+#container{
+  background: #F9F9F9;
+  padding-left: 250px;
+  position: relative;
+}
+
+.config{
+  background: #FFFFFF;
+  border-bottom: 1px solid #CCCCCC;
+  border-left: 1px solid #CCCCCC;
+  border-top: 1px solid #CCCCCC;
+  padding: 15px;
+  position: fixed;
+  right: -140px;
+  top: 95px;
+  -webkit-transition: all .15s ease-out;
+  -o-transition: all .15s ease-out;
+  transition: all .15s ease-out;
+}
+
+.config.open{
+  right: 0;
+}
+
+.config > .config-toggle{
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 5px 0 0 5px;
+  cursor:pointer;
+  left: -35px;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  Header
+/* ---------------------------------------------------------------------- */
+
+#header{
+  height: 50px;
+  padding-left: 250px;
+  width: 100%;
+  z-index: 1;
+}
+
+#header > .logo{
+  height: 50px;
+  left: 0;
+  padding: 10px 0 0 15px;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+
+#header > .logo > a > img{
+  height: 30px;
+}
+
+#header > .logo.fixed{
+  position: fixed;
+  z-index: 1;
+}
+
+#header > .header-content{
+  height: 50px;
+  width: 100%;
+}
+
+#header > .header-content > ul{
+  float: right;
+  height: 50px;
+  list-style: none;
+  margin: 0;
+}
+
+#header > .header-content > ul > li{
+  height: 50px;
+}
+
+#header > .header-content > ul > li > a.dropdown-toggle{
+  display: block;
+  height: 49px;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+}
+
+#header > .header-content > ul > li > a.dropdown-toggle > img{
+  height: 30px; 
+}
+
+#header > .header-content > ul > li.dropdown.open > ul.dropdown-menu{
+  border-radius: 0 0 4px 4px;
+  border-top: 0;
+  font-size:13px;
+  margin: 0;
+  padding: 0;
+}
+
+#header > .header-content > ul > li.dropdown.open > ul.dropdown-menu > li > a{
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+#header.header-fixed{
+  position: fixed;
+  top: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  Sidebar
+/* ---------------------------------------------------------------------- */
+
+#container > #sidebar{
+  /*font-weight: bold;*/
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+
+#container > #sidebar > ul{
+  list-style: none;
+  margin-bottom: 0;
+  margin-top: 10px;
+  padding-left: 0;
+  text-transform: uppercase;
+}
+
+#container > #sidebar > ul > li > a{
+  display: block;
+  padding: 10px 10px 10px 15px;
+  width: 100%;
+}
+
+#container > #sidebar > ul > li > a:link, #container > #sidebar > ul > li > a:active{
+  text-decoration: none;
+}
+
+#container > #sidebar > ul > li > a:hover{
+  text-decoration: none;
+}
+
+#container > #sidebar > ul > li > a > span.glyphicon{
+  margin-right: 5px;
+}
+
+#container > #sidebar > ul > li > a > span.caret{
+  margin-top: 8px;
+  float: right;
+}
+
+#container > #sidebar > ul > li > ul{
+  display: none;
+  list-style: none;
+  padding-left: 0;
+  text-transform: none;
+}
+
+#container > #sidebar > ul > li > ul > li > a{
+  display: block;
+  padding: 10px 0 10px 36px;
+}
+
+#container > #sidebar > ul > li > ul > li > a:hover{
+  text-decoration: none;
+}
+
+#sidebar-toggle{
+  cursor: pointer;
+  display: none;
+  float: left;
+  margin: 8px;
+}
+
+#container > #sidebar.sidebar-fixed{
+  position: fixed;
+  top: 50px;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  Content
+/* ---------------------------------------------------------------------- */
+
+.container-fluid > .row.breadcrumbs{
+  background: #FFFFFF;
+  border-bottom: 1px solid #CCCCCC;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.container-fluid > .row.breadcrumbs .breadcrumb{
+  background: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.container-fluid > .row.breadcrumbs .breadcrumb > li + li:before {
+  content: "\003e";
+}
+
+.container-fluid > .row.breadcrumbs .page-header{
+  border-bottom: 0;
+  color: #666666;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.container-fluid > .row.breadcrumbs .sub-header {
+  color: #999999;
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.bs-glyphicons-list {
+  list-style: none;
+}
+
+.bs-glyphicons-list li {
+  width: 30%;
+  display: inline-block;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  Charts
+/* ---------------------------------------------------------------------- */
+
+canvas{
+  margin-left:-15px;
+}
+
+.tc-chart-js-legend{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.tc-chart-js-legend li{
+  display: inline-block;
+  padding: 10px;
+  line-height: 25px;
+  font-size: 11px;
+}
+
+.tc-chart-js-legend li span {
+  float: left;
+  height: 25px;
+  margin-right: 10px;
+  width: 25px;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  Off Canvas
+/* ---------------------------------------------------------------------- */
+
+@media screen and (max-width: 467px) {
+  body{
+    overflow-x: hidden;
+  }
+  .container-fluid, .header-content{
+    min-width: 282px; 
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #header{
+    padding-left: 0;
+    /*-webkit-transition: all .25s ease-out;
+    -o-transition: all .25s ease-out;
+    transition: all .25s ease-out;*/
+  }
+  #header > .logo{
+    left: -250px;
+  }
+  #container{
+    padding-left: 0;
+  }
+  #container > #sidebar{
+    left: -250px;
+  }
+  
+  #header.active{
+    padding-left: 250px;
+  }
+  #header > .logo.active{
+    left: 0;
+  }
+  #container.active{
+    padding-left: 250px;
+  }
+  #container > #sidebar.active{
+    left: 0;
+  }
+  
+  #sidebar-toggle{
+    display: block;
+  }
+}

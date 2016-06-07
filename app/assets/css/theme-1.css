@@ -1,0 +1,94 @@
+/* ---------------------------------------------------------------------- */
+/*  Header
+/* ---------------------------------------------------------------------- */
+
+#header{
+  background: #F9F9F9;
+}
+
+#header > .logo{
+  background: #F9F9F9;
+  border-bottom: 1px solid #CCCCCC;
+  border-right: 1px solid #CCCCCC;
+}
+
+#header > .header-content{
+  border-bottom: 1px solid #CCCCCC;
+}
+
+#header > .header-content > ul > li > a.dropdown-toggle{
+  color: #666666;
+}
+
+#header > .header-content > ul > li.dropdown.open > a.dropdown-toggle{
+  background:#EEEEEE;
+}
+
+#header > .header-content > ul > li.dropdown.open > ul.dropdown-menu{
+  background: #F9F9F9;
+}
+
+#header > .header-content > ul > li.dropdown.open > ul.dropdown-menu > li > a{
+  color: #666666;
+}
+
+#header > .header-content > ul > li.dropdown.open > ul.dropdown-menu > li > a:hover{
+  background: #EEEEEE; 
+  color: #666666;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  Sidebar
+/* ---------------------------------------------------------------------- */
+
+#container > #sidebar{
+  background: #F9F9F9;
+  border-right: 1px solid #CCCCCC;
+  color: #666666;
+}
+
+#container > #sidebar > ul{
+  border-bottom: 1px solid #DDDDDD;
+  border-top: 1px solid #FFFFFF;
+}
+
+#container > #sidebar > ul > li{
+  border-bottom: 1px solid #FFFFFF;
+  border-top: 1px solid #DDDDDD;
+}
+
+#container > #sidebar > ul > li > a{
+  color: #666666;
+}
+
+#container > #sidebar > ul > li > a:link, #container > #sidebar > ul > li > a:active{
+  color: #666666;
+}
+
+#container > #sidebar > ul > li > a:hover{
+  background: #EEEEEE;
+  color: #666666;
+}
+
+#container > #sidebar > ul > li > a.active, #container > #sidebar > ul > li > a.active:hover{
+  background: #337AB7;
+  color: #FFFFFF;
+}
+
+#container > #sidebar > ul > li > ul > li > a{
+  color: #666666;
+}
+
+#container > #sidebar > ul > li > ul > li > a:hover{
+  background: #EEEEEE;
+  color: #666666;
+}
+
+#container > #sidebar > ul > li > ul > li > a:focus{
+  background: #EEEEEE;
+  text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  Content
+/* ---------------------------------------------------------------------- */

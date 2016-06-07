@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>AngularJS Admin Panel</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
+	<link href="../bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+	<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../bower_components/angular-chart.js/dist/angular-chart.min.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
+	<link data-ng-href="assets/css/{{fields.theme}}.css" rel="stylesheet">
+</head>
+<body ng-class="{'header-fixed' : fields.headerfixed}">
+	<div ui-view></div>
+	<!-- CONFIG BOX (DELETE THIS BLOCK ON PRODUCTION) -->
+	<div class="config hidden-xs">
+		<span class="config-toggle glyphicon glyphicon-cog" aria-hidden="true"></span>
+		<div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" ng-model="fields.headerfixed" /> Fixed Header
+				</label>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" ng-model="fields.sidebarfixed" /> Fixed Sidebar
+				</label>
+			</div>
+			<div class="form-group">
+				<select class="form-control" ng-model="fields.theme">
+					<option value="theme-1">Theme 1</option>
+					<option value="theme-2">Theme 2</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<!-- / CONFIG BOX -->
+	<script src="../bower_components/Chart.js/Chart.js"></script>
+	<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+	<script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<!--<script src="js/angular/angular-route.min.js"></script>-->
+	<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<!--<script src="js/angular/angular-resource.min.js"></script>-->
+	<!--<script src="js/angular/angular-animate.min.js"></script>-->
+	<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="../bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
+	<script src="assets/js/app.js"></script>
+	<script src="assets/js/controllers.js"></script>
+	<script src="assets/js/services.js"></script>
+	<script src="assets/js/directives.js"></script>
+</body>
+</html>
