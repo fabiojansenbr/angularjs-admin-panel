@@ -16,7 +16,7 @@
 </head>
 <body ng-class="{'header-fixed' : fields.headerfixed}">
 	<div ui-view></div>
-	<!-- CONFIG BOX (DELETE THIS BLOCK ON PRODUCTION) -->
+	<!-- CONFIG BOX (you can remove this block when you have your theme defined) -->
 	<div class="config hidden-xs">
 		<span class="config-toggle glyphicon glyphicon-cog" aria-hidden="true"></span>
 		<div>
@@ -44,15 +44,19 @@
 	<script src="../bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 	<script src="../bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 	<script src="../bower_components/angular/angular.min.js"></script>
-	<!--<script src="js/angular/angular-route.min.js"></script>-->
 	<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-	<!--<script src="js/angular/angular-resource.min.js"></script>-->
-	<!--<script src="js/angular/angular-animate.min.js"></script>-->
 	<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
 	<script src="../bower_components/angular-chart.js/dist/angular-chart.min.js"></script>
-	<script src="assets/js/app.js"></script>
-	<script src="assets/js/controllers.js"></script>
-	<script src="assets/js/services.js"></script>
-	<script src="assets/js/directives.js"></script>
+	<script src="app/app.module.js"></script>
+	<script src="app/app.core.module.js"></script>
+	<script src="app/layout/layout.module.js"></script>
+	<script src="app/layout/sidebar.controller.js"></script>
+	<script src="app/dashboard/dashboard.module.js"></script>
+	<script src="app/dashboard/dashboard.controller.js"></script>
+	<script src="app/charts/charts.module.js"></script>
+	<script src="app/charts/charts.controller.js"></script>
+	<script src="app/tables/tables.module.js"></script>
+	<script src="app/tables/datatables.controller.js"></script>
+	<script src="app/tables/datatables.directive.js"></script>
 </body>
 </html>
